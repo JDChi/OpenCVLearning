@@ -1,10 +1,3 @@
-//
-//  main.cpp
-//  opencv_learning
-//
-//  Created by jdchi on 2021/4/29.
-//
-
 #include <opencv2/core.hpp>
 #include <opencv2/highgui.hpp>
 #include <opencv2/imgproc.hpp>
@@ -18,6 +11,13 @@ void MyFilledCircle(Mat img , Point center);
 void MyPolygon(Mat img);
 void MyLine(Mat img , Point start , Point end);
 
+/*
+ Scalar 作为颜色的表示取决于 Mat 的类型
+ https://stackoverflow.com/questions/29301903/how-to-specify-a-color-using-scalar-class
+ 
+ LINE_8 指8连接线
+ https://en.wikipedia.org/wiki/Pixel_connectivity
+ */
 int main(void)
 {
     char atom_window[] = "Drawing 1: Atom";
@@ -54,6 +54,9 @@ int main(void)
     return (0);
 }
 
+/*
+ 椭圆
+ */
 void MyEllipse(Mat img , double angle){
     int thickness = 2;
     int lineType = 8;
